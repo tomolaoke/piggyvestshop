@@ -29,7 +29,7 @@ const Invest = () => {
           style={{ backgroundColor: "hsl(269, 85%, 49%)", minWidth: '100vw', width: '100vw', maxWidth: '100vw' }}
         >
           {/* Left side: headline, returns info, description, and app download buttons */}
-          <div className="text-white max-md:w-[100%]" style={{ marginLeft: '85px' }}>
+          <div className="text-white max-md:w-[100%]">
             {/* Main headline for the invest page */}
             <h1 className="text-5xl font-bold mb-8 max-md:text-center">
               Invest on the go
@@ -63,7 +63,7 @@ const Invest = () => {
             </div>
           </div>
           {/* Right side: hero image */}
-          <div style={{ marginRight: '70px' }}>
+          <div>
             <img src={main1} alt="Invest" className="max-h-[800px]" />
           </div>
         </section>
@@ -127,30 +127,22 @@ const Invest = () => {
         </section>
 
         <section
-          className="w-screen relative left-1/2 right-1/2 -mx-[50vw] flex items-center px-16 py-20 mb-24"
-          style={{ backgroundColor: "hsl(269, 85%, 49%)", minWidth: '104vw', width: '100vw', height: '52vh', maxWidth: '100vw' }}
+          className="w-screen relative left-1/2 right-1/2 -mx-[50vw] flex justify-between items-center px-16 py-20 mb-24"
+          style={{ backgroundColor: "hsl(269, 85%, 49%)", minWidth: '100vw', width: '100vw', height: '80vh', maxWidth: '100vw' }}
         >
-          <div
-            className="space-y-6 flex flex-col justify-center"
-            style={{ width: '600px', height: '273px', marginLeft: '90px', marginRight: '30px' }}
-          >
-            <h1 className="text-4xl font-bold text-white leading-snug">
+          <div className="space-y-6 max-w-xl ml-20">
+            <h1 className="text-5xl font-bold text-white leading-snug">
               We’ve made it easier for anyone to get started.
             </h1>
-            <p className="text-white text-xl">
+            <p className="text-white w-[80%] text-xl">
               Finally, you can access pre-vetted low-medium risk primary and
               secondary investment opportunities easily with any amount you
               have. No hidden fees/charges. Thorough due diligence and
               pre-vetting on all investments are carried out for maximum safety.
             </p>
           </div>
-          <div style={{ flex: 1, display: 'flex' }}>
-            <div style={{ flex: 1 }}></div>
-            <img
-              src={woman}
-              alt=""
-              style={{ width: '625px', height: '366px', objectFit: 'cover', boxShadow: '0 10px 25px rgba(0,0,0,0.15)' }}
-            />
+          <div className="flex-1 flex justify-end pr-20">
+            <img src={woman} alt="" className="h-[90%] w-[350px] object-cover rounded-3xl shadow-lg border-4 border-white" style={{ maxHeight: '90%', minHeight: '400px', minWidth: '250px', maxWidth: '400px' }} />
           </div>
         </section>
       </div>

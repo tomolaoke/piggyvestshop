@@ -25,11 +25,11 @@ const Invest = () => {
       <div className="mx-auto max-md:w-[100%]" style={{ backgroundColor: "#F2F7F8" }}>
         {/* Hero section with a purple background and two columns: text and image */}
         <section
-          className="w-screen relative left-1/2 right-1/2 -mx-[50vw] flex justify-center items-center gap-8 px-16 pt-[150px] max-md:flex-col"
+          className="w-screen relative left-1/2 right-1/2 -mx-[50vw] flex justify-center items-center gap-2 px-0 pt-[150px] max-md:flex-col"
           style={{ backgroundColor: "hsl(269, 85%, 49%)", minWidth: '100vw', width: '100vw', maxWidth: '100vw' }}
         >
           {/* Left side: headline, returns info, description, and app download buttons */}
-          <div className="text-white max-md:w-[100%]" style={{ marginLeft: '85px' }}>
+          <div className="text-white max-md:w-[100%] flex-1 flex justify-end pr-4">
             {/* Main headline for the invest page */}
             <h1 className="text-5xl font-bold mb-8 max-md:text-center">
               Invest on the go
@@ -63,7 +63,7 @@ const Invest = () => {
             </div>
           </div>
           {/* Right side: hero image */}
-          <div style={{ marginRight: '70px' }}>
+          <div className="flex-1 flex justify-start pl-4">
             <img src={main1} alt="Invest" className="max-h-[800px]" />
           </div>
         </section>

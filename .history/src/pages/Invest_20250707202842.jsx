@@ -29,7 +29,7 @@ const Invest = () => {
           style={{ backgroundColor: "hsl(269, 85%, 49%)", minWidth: '100vw', width: '100vw', maxWidth: '100vw' }}
         >
           {/* Left side: headline, returns info, description, and app download buttons */}
-          <div className="text-white max-md:w-[100%]" style={{ marginLeft: '85px' }}>
+          <div className="text-white max-md:w-[100%]">
             {/* Main headline for the invest page */}
             <h1 className="text-5xl font-bold mb-8 max-md:text-center">
               Invest on the go
@@ -63,7 +63,7 @@ const Invest = () => {
             </div>
           </div>
           {/* Right side: hero image */}
-          <div style={{ marginRight: '70px' }}>
+          <div>
             <img src={main1} alt="Invest" className="max-h-[800px]" />
           </div>
         </section>
@@ -128,13 +128,13 @@ const Invest = () => {
 
         <section
           className="w-screen relative left-1/2 right-1/2 -mx-[50vw] flex items-center px-16 py-20 mb-24"
-          style={{ backgroundColor: "hsl(269, 85%, 49%)", minWidth: '104vw', width: '100vw', height: '52vh', maxWidth: '100vw' }}
+          style={{ backgroundColor: "hsl(269, 85%, 49%)", minWidth: '103vw', width: '100vw', height: '52vh', maxWidth: '100vw' }}
         >
           <div
             className="space-y-6 flex flex-col justify-center"
-            style={{ width: '600px', height: '273px', marginLeft: '90px', marginRight: '30px' }}
+            style={{ width: '600px', height: '273px', marginLeft: '255px', marginRight: '20px' }}
           >
-            <h1 className="text-4xl font-bold text-white leading-snug">
+            <h1 className="text-5xl font-bold text-white leading-snug">
               We’ve made it easier for anyone to get started.
             </h1>
             <p className="text-white text-xl">
@@ -149,7 +149,7 @@ const Invest = () => {
             <img
               src={woman}
               alt=""
-              style={{ width: '625px', height: '366px', objectFit: 'cover', boxShadow: '0 10px 25px rgba(0,0,0,0.15)' }}
+              style={{ width: '625px', height: '44px', objectFit: 'cover', boxShadow: '0 10px 25px rgba(0,0,0,0.15)' }}
             />
           </div>
         </section>

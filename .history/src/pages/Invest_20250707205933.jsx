@@ -63,7 +63,7 @@ const Invest = () => {
             </div>
           </div>
           {/* Right side: hero image */}
-          <div style={{ marginRight: '70px' }}>
+          <div style={{ marginRight: '60px' }}>
             <img src={main1} alt="Invest" className="max-h-[800px]" />
           </div>
         </section>
