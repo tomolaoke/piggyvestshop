@@ -1,0 +1,78 @@
+.headernav2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  width: 100%;
+}
+
+.headernav2-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.headernav2-link {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.headernav2-link.scrolled {
+  color: #000;
+}
+
+.headernav2-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.headernav2-btn {
+  border: none;
+  outline: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 2rem;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.headernav2-btn.signin {
+  background: transparent;
+  color: #fff;
+}
+
+.headernav2-btn.signin.scrolled {
+  color: #000;
+}
+
+.headernav2-btn.create-account {
+  background: #fff;
+  color: #000;
+}
+
+.headernav2-btn.create-account.scrolled {
+  background: #000;
+  color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .headernav2 {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 0 1rem;
+  }
+  .headernav2-links {
+    gap: 1rem;
+  }
+  .headernav2-actions {
+    margin-top: 0.5rem;
+  }
+}

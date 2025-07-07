@@ -1,0 +1,10 @@
+.headernav1 {
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+
+.headernav1-logo {
+  height: 40px;
+  transition: filter 0.3s;
+}

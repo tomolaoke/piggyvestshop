@@ -1,0 +1,20 @@
+/* Hover effect for the PiggyVest Savings Report button */
+.report-hover-effect:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+  transition: background 0.2s, color 0.2s;
+}
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+  50% {
+    transform: translateY(-30px);
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2.2s infinite;
+}
