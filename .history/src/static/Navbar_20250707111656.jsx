@@ -32,17 +32,17 @@ export default function Navbar({ isInvestPage }) {
       ? 'bg-white'
       : 'bg-[#7913e7]'
     : 'bg-[#f2f7f8]';
-  // Logo color logic (SVG filter for white or #7913e7)
-  const logoStyle = isInvestPage
-    ? scrolled
-      ? { filter: 'none' }
-      : { filter: 'brightness(0) invert(1)' }
-    : {};
+  // Use the same logo src always, but apply a filter to change color on scroll
+  // const logoSrc = "https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/logo_08e6965627/logo_08e6965627.svg";
+  // On Invest page, on scroll, apply filter to make logo #ac6def. Otherwise, white or default.
+  // This only works well for SVGs that are single color (monochrome). For multi-color SVGs, a colored version is needed.
+  // Use inline SVG for logo so we can set fill directly for perfect #ac6def color
+  // If not on Invest page, or not scrolled, use white; if on Invest page and scrolled, use #ac6def
+  const logoFill = isInvestPage && scrolled ? '#ac6def' : '#fff';
   // Nav link color logic
-  // On Invest page, on scroll, use dark grey (#263142); before scroll, white. Elsewhere, default dark grey.
   const navLinkColor = isInvestPage
     ? scrolled
-      ? 'text-[#263142]'
+      ? 'text-black'
       : 'text-white'
     : 'text-[#263142]';
   // Create Account button logic
@@ -64,12 +64,22 @@ export default function Navbar({ isInvestPage }) {
         <div className="w-[70%] flex items-center">
         <div className="w-[20%]">
           <Link to={"/"}>
-            <img
-              className="bg-transparent"
-              src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/logo_08e6965627/logo_08e6965627.svg"
-              alt="logo"
-              style={logoStyle}
-            />
+            {/* Inline SVG logo for dynamic color control (PiggyVest logo) */}
+            <svg
+              width="120"
+              height="32"
+              viewBox="0 0 120 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ display: 'block' }}
+            >
+              <g>
+                {/* PiggyVest logo icon (circle with piggy shape) */}
+                <circle cx="16" cy="16" r="16" fill={logoFill} />
+                {/* PiggyVest logo text ("PiggyVest") - simplified for demo, replace with actual path for production */}
+                <text x="38" y="22" fontFamily="Arial, Helvetica, sans-serif" fontWeight="bold" fontSize="20" fill={logoFill}>PiggyVest</text>
+              </g>
+            </svg>
           </Link>
         </div>
         <div className={`flex items-center gap-x-[22px] font-bold text-[17px] ${navLinkColor} tracking-tight ml-8`}>

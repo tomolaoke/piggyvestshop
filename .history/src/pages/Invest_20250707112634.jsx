@@ -25,8 +25,8 @@ const Invest = () => {
       <div className="mx-auto max-md:w-[100%]" style={{ backgroundColor: "#F2F7F8" }}>
         {/* Hero section with a purple background and two columns: text and image */}
         <section
-          className="w-screen relative left-1/2 right-1/2 -mx-[50vw] flex justify-center items-center gap-8 px-16 pt-[150px] max-md:flex-col"
-          style={{ backgroundColor: "hsl(269, 85%, 49%)", minWidth: '100vw', width: '100vw', maxWidth: '100vw' }}
+          className="w-screen relative left-1/2 right-1/2 -mx-[50vw] flex justify-center items-center gap-16 px-16 pt-[150px] max-md:flex-col"
+          style={{ backgroundColor: "hsl(269, 85%, 49%)", minWidth: '100vw', width: '100vw' }}
         >
           {/* Left side: headline, returns info, description, and app download buttons */}
           <div className="text-white max-md:w-[100%]">
@@ -127,10 +127,15 @@ const Invest = () => {
         </section>
 
         <section
-          className="w-screen relative left-1/2 right-1/2 -mx-[50vw] flex justify-between items-center px-16 py-20 mb-24"
-          style={{ backgroundColor: "hsl(269, 85%, 49%)", minWidth: '100vw', width: '100vw', height: '80vh', maxWidth: '100vw' }}
+          style={{
+            height: "80vh",
+          }}
+          className=" max-w-[1280px] flex justify-between items-center mb-24"
         >
-          <div className="space-y-6 max-w-xl">
+          <div
+            className="  px-16 py-20 space-y-6"
+            style={{ backgroundColor: "hsl(269, 85%, 49%)" }}
+          >
             <h1 className="text-5xl font-bold text-white leading-snug  ">
               We’ve made it easier for anyone to get started.
             </h1>

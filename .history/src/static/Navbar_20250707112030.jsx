@@ -39,10 +39,9 @@ export default function Navbar({ isInvestPage }) {
       : { filter: 'brightness(0) invert(1)' }
     : {};
   // Nav link color logic
-  // On Invest page, on scroll, use dark grey (#263142); before scroll, white. Elsewhere, default dark grey.
   const navLinkColor = isInvestPage
     ? scrolled
-      ? 'text-[#263142]'
+      ? 'text-[#eff1f2]'
       : 'text-white'
     : 'text-[#263142]';
   // Create Account button logic

@@ -127,10 +127,15 @@ const Invest = () => {
         </section>
 
         <section
-          className="w-screen relative left-1/2 right-1/2 -mx-[50vw] flex justify-between items-center px-16 py-20 mb-24"
-          style={{ backgroundColor: "hsl(269, 85%, 49%)", minWidth: '100vw', width: '100vw', height: '80vh', maxWidth: '100vw' }}
+          style={{
+            height: "80vh",
+          }}
+          className=" max-w-[1280px] flex justify-between items-center mb-24"
         >
-          <div className="space-y-6 max-w-xl">
+          <div
+            className="  px-16 py-20 space-y-6"
+            style={{ backgroundColor: "hsl(269, 85%, 49%)" }}
+          >
             <h1 className="text-5xl font-bold text-white leading-snug  ">
               We’ve made it easier for anyone to get started.
             </h1>

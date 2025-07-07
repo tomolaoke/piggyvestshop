@@ -127,7 +127,7 @@ const Invest = () => {
         </section>
 
         <section
-          className="w-screen relative left-1/2 right-1/2 -mx-[50vw] flex justify-between items-center px-16 py-20 mb-24"
+          className="w-screen relative left-1/2 right-1/2 -mx-[50vw] flex justify-center items-center gap-8 px-16 py-20 mb-24"
           style={{ backgroundColor: "hsl(269, 85%, 49%)", minWidth: '100vw', width: '100vw', height: '80vh', maxWidth: '100vw' }}
         >
           <div className="space-y-6 max-w-xl">

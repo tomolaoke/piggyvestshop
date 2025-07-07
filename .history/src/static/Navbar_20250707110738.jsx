@@ -32,17 +32,17 @@ export default function Navbar({ isInvestPage }) {
       ? 'bg-white'
       : 'bg-[#7913e7]'
     : 'bg-[#f2f7f8]';
-  // Logo color logic (SVG filter for white or #7913e7)
-  const logoStyle = isInvestPage
-    ? scrolled
-      ? { filter: 'none' }
-      : { filter: 'brightness(0) invert(1)' }
-    : {};
+  // Use the same logo src always, but apply a filter to change color on scroll
+  const logoSrc = "https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/logo_08e6965627/logo_08e6965627.svg";
+  // On Invest page, on scroll, apply filter to make logo #ac6def. Otherwise, white or default.
+  // This only works well for SVGs that are single color (monochrome). For multi-color SVGs, a colored version is needed.
+  // Use inline SVG for logo so we can set fill directly for perfect #ac6def color
+  // If not on Invest page, or not scrolled, use white; if on Invest page and scrolled, use #ac6def
+  const logoFill = isInvestPage && scrolled ? '#ac6def' : '#fff';
   // Nav link color logic
-  // On Invest page, on scroll, use dark grey (#263142); before scroll, white. Elsewhere, default dark grey.
   const navLinkColor = isInvestPage
     ? scrolled
-      ? 'text-[#263142]'
+      ? 'text-black'
       : 'text-white'
     : 'text-[#263142]';
   // Create Account button logic
@@ -66,7 +66,7 @@ export default function Navbar({ isInvestPage }) {
           <Link to={"/"}>
             <img
               className="bg-transparent"
-              src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/logo_08e6965627/logo_08e6965627.svg"
+              src={logoSrc}
               alt="logo"
               style={logoStyle}
             />
